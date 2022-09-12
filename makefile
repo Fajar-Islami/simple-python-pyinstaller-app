@@ -12,3 +12,6 @@ blueocean:
 
 blueocean_cat:
 	docker exec -it jenskins-bluocean_proyek_pertama bash cat /var/jenkins_home/config.xml | grep disableSignup
+
+test:
+	pytest ./sources --cov-report=html --cov=gameactions --cov-branch
