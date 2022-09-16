@@ -35,9 +35,10 @@ pipeline {
             steps {
                  withEnv(["HOME=${env.WORKSPACE}"]) {
                     sh "pip3 install --user --upgrade -r ./config/requirements.txt"
+                    sh './jenkins/scripts/deliver.sh'
                     // sh 'pip3 install --user fastapi'
                     // sh 'pip3 install --user uvicorn'
-                    sh "python3 -m uvicorn sources.main:app --reload --port 3000"
+                    sh "python3 -m uvicorn sources.main:app --reload --port 3000 & sleep 1"
                     echo 'Visit http://localhost:3000 to see your REST application in action.'
                     
 
