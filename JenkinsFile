@@ -27,11 +27,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            agent {
-                docker {
-                    image 'python:3.9'
-                }
-            }
+            agent none
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 echo "Waiting 60 seconds for test the app before deploying"
