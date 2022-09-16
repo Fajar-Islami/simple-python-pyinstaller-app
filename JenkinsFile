@@ -27,19 +27,23 @@ pipeline {
             }
         }
         stage('Deploy') {
-            agent {
-                docker {
-                    image 'cdrx/pyinstaller-linux:python2'
-                }
-            }
+            // agent {
+            //     docker {
+            //         image 'cdrx/pyinstaller-linux:python2'
+            //     }
+            // }
             steps {
-                sh 'pyinstaller --onefile sources/add2vals.py'
+                def time = 60 // second
+                echo "Waiting ${SLEEP_TIME_IN_SECONDS} seconds for test the app before it's approved"
+                sleep time.toInteger() // seconds
+                echo "Waiting Complete"
+                // sh 'pyinstaller --onefile sources/add2vals.py'
             }
-            post {
-                success {
-                    archiveArtifacts 'dist/add2vals'
-                }
-            }
+            // post {
+            //     success {
+            //         archiveArtifacts 'dist/add2vals'
+            //     }
+            // }
         }
     }
 }
