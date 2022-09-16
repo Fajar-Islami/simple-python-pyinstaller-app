@@ -34,7 +34,7 @@ pipeline {
             // }
             steps {
                 
-                echo "Waiting 60 seconds for test the app before it's approved"
+                echo "Waiting 60 seconds for test the app before deploying"
                 sleep 10 // seconds
                 echo "Waiting Complete"
 
