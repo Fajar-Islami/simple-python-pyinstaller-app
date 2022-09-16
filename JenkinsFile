@@ -33,6 +33,7 @@ pipeline {
                 }
             }
             steps {
+                sh "pip install --no-cache-dir --upgrade -r /code/requirements.txt"
                 sh "make run"
                 // sh "./jenkins/scripts/deliver.sh"
                 echo "Waiting 60 seconds for test the app before deploying"
