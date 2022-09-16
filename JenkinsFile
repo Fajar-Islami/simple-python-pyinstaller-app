@@ -35,9 +35,9 @@ pipeline {
             steps {
                 
                 echo "Waiting 60 seconds for test the app before it's approved"
-                sleep 60 // seconds
+                sleep 10 // seconds
                 echo "Waiting Complete"
-                
+
                 input message: 'Proceed to the Deploy stage?'
                 echo "App Deployed"
                 // sh 'pyinstaller --onefile sources/add2vals.py'
