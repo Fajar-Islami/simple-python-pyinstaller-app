@@ -26,9 +26,9 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['localhost:9091']
 
   - job_name: 'jenkins'
     metrics_path: /prom/
     static_configs:
-      - targets: ['host.docker.internal:8080']
+      - targets: ['jenskins-bluocean_proyek_pertama:8080']
