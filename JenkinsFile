@@ -33,9 +33,7 @@ pipeline {
             //     }
             // }
             steps {
-                docker build -f dockerfile-app . --tag simple-pyhton:1.0.0
-                docker run -d --name simple-pyhton -p 3000:3000 simple-pyhton:1.0.0
-
+                sh './jenkins/scripts/deliver.sh'
                 echo "Waiting 60 seconds for test the app before deploying"
                 sleep 10 // seconds
                 echo "Waiting Complete"

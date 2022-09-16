@@ -30,7 +30,7 @@ app:
 	docker build -f dockerfile-app . --tag simple-pyhton:1.0.0
 
 container:
-	docker run -d --name simple-pyhton -p 8000:8000 simple-pyhton:1.0.0
+	docker run --rm -d --name simple-pyhton -p 3000:3000 simple-pyhton:1.0.0
 
 rm:
 	docker stop simple-pyhton
