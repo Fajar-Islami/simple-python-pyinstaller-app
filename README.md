@@ -19,6 +19,7 @@ you'll be creating yourself during the tutorial.
 
 # Documentaion
 
-```url
-http://localhost:8000/docs
-```
+URL
+
+- http://localhost:8000/docs
+- http://localhost:8000/redoc

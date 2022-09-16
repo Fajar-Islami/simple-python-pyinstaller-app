@@ -25,3 +25,13 @@ calc:
 
 install:
 	python3 -m pip install -r ./config/requirements.txt
+
+app:
+	docker build -f dockerfile-app . --tag simple-pyhton:1.0.0
+
+container:
+	docker run -d --name simple-pyhton -p 8000:8000 simple-pyhton:1.0.0
+
+rm:
+	docker stop simple-pyhton
+	docker rm simple-pyhton
