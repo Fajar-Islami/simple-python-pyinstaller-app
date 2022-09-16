@@ -33,17 +33,21 @@ pipeline {
                 }
             }
             steps {
-                sh "pip3 install --user --upgrade -r ./config/requirements.txt"
-                sh "python3 -m uvicorn sources.main:app --reload --port 3000"
-                echo 'Visit http://localhost:3000 to see your REST application in action.'
-                
+                 withEnv(["HOME=${env.WORKSPACE}"]) {
+                    // sh "pip3 install --user --upgrade -r ./config/requirements.txt"
+                    // sh 'pip3 install --user fastapi'
+                    // sh 'pip3 install --user uvicorn'
+                    sh "python3 -m uvicorn sources.main:app --reload --port 3000"
+                    echo 'Visit http://localhost:3000 to see your REST application in action.'
+                    
 
-                echo "Waiting 60 seconds for test the app before deploying"
-                sleep 10 // seconds
-                echo "Waiting Complete"
+                    echo "Waiting 60 seconds for test the app before deploying"
+                    sleep 10 // seconds
+                    echo "Waiting Complete"
 
-                input message: 'Proceed to the Deploy stage?'
-                echo "App Deployed"
+                    input message: 'Proceed to the Deploy stage?'
+                    echo "App Deployed"
+                 }
             }
             // post {
             //     success {
