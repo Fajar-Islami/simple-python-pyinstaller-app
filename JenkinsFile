@@ -33,7 +33,7 @@ pipeline {
                 }
             }
             steps {
-                sh "pip3 install --upgrade -r ./config/requirements.txt"
+                sh "python3 -m pip3 install --upgrade -r ./config/requirements.txt"
                 sh "python3 -m uvicorn sources.main:app --reload --port 3000"
                 echo 'Visit http://localhost:3000 to see your REST application in action.'
                 
