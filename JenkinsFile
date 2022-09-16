@@ -27,11 +27,11 @@ pipeline {
             }
         }
         stage('Deploy') {
-            // agent {
-            //     docker {
-            //         image 'cdrx/pyinstaller-linux:python2'
-            //     }
-            // }
+            agent {
+                docker {
+                    image 'python:3.9'
+                }
+            }
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 echo "Waiting 60 seconds for test the app before deploying"
