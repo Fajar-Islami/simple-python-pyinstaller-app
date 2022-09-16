@@ -7,7 +7,7 @@ set +x
 
 echo 'Running REST'
 set -x
-python3 -m uvicorn sources.main:app --reload --port 3000 
+python3 -m uvicorn sources.main:app --port 3000 
 & sleep 1
 echo $! > .pidfile
 set +x
