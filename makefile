@@ -16,3 +16,9 @@ blueocean_cat:
 push:
 	git push -u origin master
 	git push --tags
+
+run:
+	python3 -m uvicorn sources.main:app --reload
+
+calc:
+	python3 ./sources/add2vals.py ${num1} ${num2}

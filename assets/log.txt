@@ -1,0 +1,35 @@
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/submission-cicd-pipeline-fajar_islami/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url /home/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app # timeout=10
+Fetching upstream changes from /home/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- /home/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 5c08e267d06f743b76b4a2914e6b41d48a62b23a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5c08e267d06f743b76b4a2914e6b41d48a62b23a # timeout=10
+Commit message: "add jenskins file"
++ docker inspect -f . qnib/pytest
+.
++ py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.14, pytest-3.5.0, py-1.5.3, pluggy-0.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/submission-cicd-pipeline-fajar_islami, inifile:
+plugins: cov-2.5.1
+collecting ... collected 5 items
+
+sources/test_calc.py::TestCalc::test_add_floats PASSED                   [ 20%]
+sources/test_calc.py::TestCalc::test_add_integers PASSED                 [ 40%]
+sources/test_calc.py::TestCalc::test_add_string_and_integer PASSED       [ 60%]
+sources/test_calc.py::TestCalc::test_add_string_and_number PASSED        [ 80%]
+sources/test_calc.py::TestCalc::test_add_strings PASSED                  [100%]
+
+ generated xml file: /var/jenkins_home/workspace/submission-cicd-pipeline-fajar_islami/test-reports/results.xml 
+=========================== 5 passed in 0.05 seconds ===========================
+Recording test results
+[Checks API] No suitable checks publisher found.
