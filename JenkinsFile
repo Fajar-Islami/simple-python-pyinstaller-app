@@ -39,10 +39,7 @@ pipeline {
             steps {
                 // dir(path: env.BUILD_ID) {
                     // unstash(name: 'compiled-results')
-                    // sh "./jenkins/scripts/dockerize.sh"
-                    sh 'pwd'
-                    sh 'ls'
-                    sh 'cd sources && ls'
+                    sh "./jenkins/scripts/dockerize.sh"
                     sh './jenkins/scripts/deliver.sh'
                     sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F add2vals.py'"
                 // }
