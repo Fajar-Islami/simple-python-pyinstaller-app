@@ -26,29 +26,29 @@ pipeline {
                 }
             }
         }
-        // stage('Deploy') {
-        //     agent {
-        //         docker {
-        //             image 'python:3.9'
-        //         }
-        //     }
-        //     steps {
-        //         //  withEnv(["HOME=${env.WORKSPACE}"]) {
-        //             sh './jenkins/scripts/deliver.sh'
+        stage('Deploy') {
+            agent {
+                docker {
+                    image 'python:3.9'
+                }
+            }
+            steps {
+                //  withEnv(["HOME=${env.WORKSPACE}"]) {
+                    // sh './jenkins/scripts/deliver.sh'
 
-        //             echo "Waiting 60 seconds for test the app before deploying"
-        //             sleep 10 // seconds
-        //             echo "Waiting Complete"
+                    echo "Waiting 60 seconds for test the app before deploying"
+                    sleep 10 // seconds
+                    echo "Waiting Complete"
 
-        //             input message: 'Proceed to the Deploy stage?'
-        //             echo "App Deployed"
-        //         //  }
-        //     }
-        //     // post {
-        //     //     success {
-        //     //         archiveArtifacts 'dist/add2vals'
-        //     //     }
-        //     // }
-        // }
+                    // input message: 'Proceed to the Deploy stage?'
+                    // echo "App Deployed"
+                //  }
+            }
+            // post {
+            //     success {
+            //         archiveArtifacts 'dist/add2vals'
+            //     }
+            // }
+        }
     }
 }

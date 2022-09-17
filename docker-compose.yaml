@@ -66,6 +66,7 @@ services:
       - prometheus_data:/prometheus
     networks:
       - jenkins
+
   grafana_proyek_pertama:
     image: grafana/grafana:9.1.3
     container_name: grafana_proyek_pertama
