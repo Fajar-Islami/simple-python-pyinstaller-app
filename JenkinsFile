@@ -57,7 +57,7 @@ pipeline {
                 }
             steps {
                 //  withEnv(["HOME=${env.WORKSPACE}"]) {
-                    sh './jenkins/scripts/dockerize.sh'
+                    sh "./jenkins/scripts/dockerize.sh"
 
                     echo "Waiting 60 seconds for test the app before deploying"
                     sleep 10 // seconds
