@@ -43,7 +43,7 @@ pipeline {
                     // echo "App Deployed"
                     // sh "./jenkins/scripts/cleaningbuild.sh"
 
-                    sh "./jenkins/scripts/push.sh"
+                    sh "./jenkins/scripts/gitpush.sh"
             }
         }
     }
