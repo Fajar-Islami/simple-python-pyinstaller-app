@@ -10,6 +10,8 @@ echo 'DONE........'
 
 echo 'Add to staging'
 set -x
+git config --global user.email "ahmadfajarislami@protonmail.com"
+git config --global user.name "Fajar-Islami"
 git add .
 set +x
 
@@ -22,4 +24,5 @@ echo 'Push to Heroku'
 set -x
 git push -u heroku master
 set +x
+
 
