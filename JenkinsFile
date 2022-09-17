@@ -34,7 +34,6 @@ pipeline {
             }
             steps {
                  withEnv(["HOME=${env.WORKSPACE}"]) {
-                    sh 'docker -v'
                     sh './jenkins/scripts/deliver.sh'
 
                     echo "Waiting 60 seconds for test the app before deploying"
