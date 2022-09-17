@@ -1,0 +1,276 @@
+[
+  {
+    "Id": "e3556a5b0c86fa96df62f805b664095f4486b6172db1f493ee75b390114b05ac",
+    "Created": "2022-09-12T02:21:58.648318051Z",
+    "Path": "dockerd-entrypoint.sh",
+    "Args": ["--storage-driver=overlay2"],
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 23911,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2022-09-17T02:34:44.809163045Z",
+      "FinishedAt": "2022-09-17T02:34:40.761278084Z"
+    },
+    "Image": "sha256:0ee99f16a2c37609008446d78773552ed7d8c2761620a3ca1be5ac169add247e",
+    "ResolvConfPath": "/var/lib/docker/containers/e3556a5b0c86fa96df62f805b664095f4486b6172db1f493ee75b390114b05ac/resolv.conf",
+    "HostnamePath": "/var/lib/docker/containers/e3556a5b0c86fa96df62f805b664095f4486b6172db1f493ee75b390114b05ac/hostname",
+    "HostsPath": "/var/lib/docker/containers/e3556a5b0c86fa96df62f805b664095f4486b6172db1f493ee75b390114b05ac/hosts",
+    "LogPath": "/var/lib/docker/containers/e3556a5b0c86fa96df62f805b664095f4486b6172db1f493ee75b390114b05ac/e3556a5b0c86fa96df62f805b664095f4486b6172db1f493ee75b390114b05ac-json.log",
+    "Name": "/jenskins-docker_proyek_pertama",
+    "RestartCount": 0,
+    "Driver": "overlay2",
+    "Platform": "linux",
+    "MountLabel": "",
+    "ProcessLabel": "",
+    "AppArmorProfile": "",
+    "ExecIDs": null,
+    "HostConfig": {
+      "Binds": [],
+      "ContainerIDFile": "",
+      "LogConfig": {
+        "Type": "json-file",
+        "Config": {}
+      },
+      "NetworkMode": "simple-python-pyinstaller-app_jenkins",
+      "PortBindings": {
+        "2376/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "2376"
+          }
+        ],
+        "3000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "3000"
+          }
+        ]
+      },
+      "RestartPolicy": {
+        "Name": "",
+        "MaximumRetryCount": 0
+      },
+      "AutoRemove": false,
+      "VolumeDriver": "",
+      "VolumesFrom": null,
+      "CapAdd": null,
+      "CapDrop": null,
+      "CgroupnsMode": "private",
+      "Dns": [],
+      "DnsOptions": [],
+      "DnsSearch": [],
+      "ExtraHosts": null,
+      "GroupAdd": null,
+      "IpcMode": "private",
+      "Cgroup": "",
+      "Links": null,
+      "OomScoreAdj": 0,
+      "PidMode": "",
+      "Privileged": true,
+      "PublishAllPorts": false,
+      "ReadonlyRootfs": false,
+      "SecurityOpt": ["label=disable"],
+      "UTSMode": "",
+      "UsernsMode": "",
+      "ShmSize": 67108864,
+      "Runtime": "runc",
+      "ConsoleSize": [0, 0],
+      "Isolation": "",
+      "CpuShares": 0,
+      "Memory": 0,
+      "NanoCpus": 0,
+      "CgroupParent": "",
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": null,
+      "BlkioDeviceReadBps": null,
+      "BlkioDeviceWriteBps": null,
+      "BlkioDeviceReadIOps": null,
+      "BlkioDeviceWriteIOps": null,
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpuRealtimePeriod": 0,
+      "CpuRealtimeRuntime": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "Devices": null,
+      "DeviceCgroupRules": null,
+      "DeviceRequests": null,
+      "KernelMemory": 0,
+      "KernelMemoryTCP": 0,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": null,
+      "OomKillDisable": null,
+      "PidsLimit": null,
+      "Ulimits": null,
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "IOMaximumIOps": 0,
+      "IOMaximumBandwidth": 0,
+      "Mounts": [
+        {
+          "Type": "volume",
+          "Source": "simple-python-pyinstaller-app_jenkins-docker-certs_proyek_pertama",
+          "Target": "/certs/client",
+          "VolumeOptions": {}
+        },
+        {
+          "Type": "volume",
+          "Source": "simple-python-pyinstaller-app_jenkins-data_proyek_pertama",
+          "Target": "/var/jenkins_home",
+          "VolumeOptions": {}
+        }
+      ],
+      "MaskedPaths": null,
+      "ReadonlyPaths": null
+    },
+    "GraphDriver": {
+      "Data": {
+        "LowerDir": "/var/lib/docker/overlay2/bf95e421b958f0e9bed9b95740b97037cd8cf25fd2d5272e0bb178d7b3b57502-init/diff:/var/lib/docker/overlay2/d9bf0be4e7133ebc2c9b123f8b5827ba5590deec1f5f18c8fbc97a8988c1b3da/diff:/var/lib/docker/overlay2/4ac63cdca23601e89af4f58dbdae23c5669a621654cd31c05dc7d937a4ae955a/diff:/var/lib/docker/overlay2/1630f4b2526f9f548ae2e378a6766a7d228c5c2b9c72d3b909fe6fb394d963dd/diff:/var/lib/docker/overlay2/689d14469b25ef4864d5962090e7a50f352a7111ea7cf5e2797e19e62d1871e2/diff:/var/lib/docker/overlay2/9626e0a7d1c4cd69ebb4ec2b74b84c7a55409ca78909e8ebd96fee25096c4410/diff:/var/lib/docker/overlay2/a49c44b833533fa9691c9998eea9aec6308556f674b01fe51c649a0aeeb9848f/diff:/var/lib/docker/overlay2/3c652abfc5248308aefb05265eaa8edf2f2dd0b645d3f10a447c23be109f6d6e/diff:/var/lib/docker/overlay2/cb7de5a68beb8ab7f971c45b4c52f0dae139cdc324a338c7c4c7eac1a4cd1eee/diff:/var/lib/docker/overlay2/969096b112e4522fa07baa4e7eef0af71e49f68c4dc38011297ecc105396281d/diff:/var/lib/docker/overlay2/0eb93ffa74c869ef7c9da956b21ed9d307d76d8de1f7ff9d437960b88de6c7b9/diff:/var/lib/docker/overlay2/61217d12b922352e50f41c0d16551fad9dc7679a72911468771cd7ca6f78f810/diff:/var/lib/docker/overlay2/ca75337a5b57a687d92142608f63b4f20eb88c82e556777b20232d653fcbd94f/diff:/var/lib/docker/overlay2/ed701646732591e275fc4cecdd5d097b3948686eb51cd0ec05c48c1e5d149cf0/diff:/var/lib/docker/overlay2/7263c99ed37e672ce97f818685fcb4a0607cd46ec3784a40db0ca6a261a13090/diff",
+        "MergedDir": "/var/lib/docker/overlay2/bf95e421b958f0e9bed9b95740b97037cd8cf25fd2d5272e0bb178d7b3b57502/merged",
+        "UpperDir": "/var/lib/docker/overlay2/bf95e421b958f0e9bed9b95740b97037cd8cf25fd2d5272e0bb178d7b3b57502/diff",
+        "WorkDir": "/var/lib/docker/overlay2/bf95e421b958f0e9bed9b95740b97037cd8cf25fd2d5272e0bb178d7b3b57502/work"
+      },
+      "Name": "overlay2"
+    },
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "simple-python-pyinstaller-app_jenkins-data_proyek_pertama",
+        "Source": "/var/lib/docker/volumes/simple-python-pyinstaller-app_jenkins-data_proyek_pertama/_data",
+        "Destination": "/var/jenkins_home",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "88ef72be72619db14fcae1a4b69e8528ab75e2ea0f5ee54de2d61e29c56f0736",
+        "Source": "/var/lib/docker/volumes/88ef72be72619db14fcae1a4b69e8528ab75e2ea0f5ee54de2d61e29c56f0736/_data",
+        "Destination": "/var/lib/docker",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "simple-python-pyinstaller-app_jenkins-docker-certs_proyek_pertama",
+        "Source": "/var/lib/docker/volumes/simple-python-pyinstaller-app_jenkins-docker-certs_proyek_pertama/_data",
+        "Destination": "/certs/client",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "Config": {
+      "Hostname": "e3556a5b0c86",
+      "Domainname": "",
+      "User": "",
+      "AttachStdin": false,
+      "AttachStdout": true,
+      "AttachStderr": true,
+      "ExposedPorts": {
+        "2375/tcp": {},
+        "2376/tcp": {},
+        "3000/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "DOCKER_TLS_CERTDIR=/certs",
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "DOCKER_VERSION=20.10.17",
+        "DOCKER_BUILDX_VERSION=0.9.1",
+        "DOCKER_COMPOSE_VERSION=2.10.2",
+        "DIND_COMMIT=42b1175eda071c0e9121e1d64345928384a93df1"
+      ],
+      "Cmd": ["--storage-driver=overlay2"],
+      "Image": "docker:dind",
+      "Volumes": {
+        "/certs/client": {},
+        "/var/jenkins_home": {},
+        "/var/lib/docker": {}
+      },
+      "WorkingDir": "",
+      "Entrypoint": ["dockerd-entrypoint.sh"],
+      "OnBuild": null,
+      "Labels": {
+        "com.docker.compose.config-hash": "4a4442342fe6c512b187dda55386b30dcd20956fa91496d9b93978cbb8548d12",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "",
+        "com.docker.compose.image": "sha256:0ee99f16a2c37609008446d78773552ed7d8c2761620a3ca1be5ac169add247e",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "simple-python-pyinstaller-app",
+        "com.docker.compose.project.config_files": "/Users/fajarpazemo/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app/docker-compose.yaml",
+        "com.docker.compose.project.working_dir": "/Users/fajarpazemo/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app",
+        "com.docker.compose.service": "jenskins-docker_proyek_pertama",
+        "com.docker.compose.version": "2.3.3"
+      }
+    },
+    "NetworkSettings": {
+      "Bridge": "",
+      "SandboxID": "a69b49cd436ed96197796b76696baebd7c3d588ebb8aa453d1e3f6ac87c4d820",
+      "HairpinMode": false,
+      "LinkLocalIPv6Address": "",
+      "LinkLocalIPv6PrefixLen": 0,
+      "Ports": {
+        "2375/tcp": null,
+        "2376/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "2376"
+          }
+        ],
+        "3000/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "3000"
+          }
+        ]
+      },
+      "SandboxKey": "/var/run/docker/netns/a69b49cd436e",
+      "SecondaryIPAddresses": null,
+      "SecondaryIPv6Addresses": null,
+      "EndpointID": "",
+      "Gateway": "",
+      "GlobalIPv6Address": "",
+      "GlobalIPv6PrefixLen": 0,
+      "IPAddress": "",
+      "IPPrefixLen": 0,
+      "IPv6Gateway": "",
+      "MacAddress": "",
+      "Networks": {
+        "simple-python-pyinstaller-app_jenkins": {
+          "IPAMConfig": {},
+          "Links": null,
+          "Aliases": [
+            "jenskins-docker_proyek_pertama",
+            "jenskins-docker_proyek_pertama",
+            "docker",
+            "e3556a5b0c86"
+          ],
+          "NetworkID": "0ce7fe01f96715a024427531cf6356969e9437958a5e3a98c518e1c5500765c4",
+          "EndpointID": "37df0d754d7fab98bfc975ca85fcc81512f3589c055d31c3c0b28c13930843d3",
+          "Gateway": "172.28.0.1",
+          "IPAddress": "172.28.0.3",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "MacAddress": "02:42:ac:1c:00:03",
+          "DriverOpts": null
+        }
+      }
+    }
+  }
+]

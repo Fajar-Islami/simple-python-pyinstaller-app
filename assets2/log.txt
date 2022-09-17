@@ -1,0 +1,45 @@
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/submission-cicd-pipeline-fajar_islami/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url /home/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app # timeout=10
+Fetching upstream changes from /home/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- /home/Documents/Belajar/Dicoding/DevOps/4_Belajar_Implementasi_CI_CD/simple-python-pyinstaller-app +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision c31a26aa5ba41052af4af89808c7268f8fe531ba (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c31a26aa5ba41052af4af89808c7268f8fe531ba # timeout=10
+Commit message: ":hammer: update jenkinsfile deploy stage"
++ docker inspect -f . python:3.9
+.
++ ./jenkins/scripts/deliver.sh
+Installing depedencies
++ pip3 install --user --upgrade -r ./config/requirements.txt
+Requirement already satisfied: fastapi<0.69.0,>=0.68.0 in ./.local/lib/python3.9/site-packages (from -r ./config/requirements.txt (line 1)) (0.68.2)
+Requirement already satisfied: pydantic<2.0.0,>=1.8.0 in ./.local/lib/python3.9/site-packages (from -r ./config/requirements.txt (line 2)) (1.10.2)
+Requirement already satisfied: uvicorn<0.16.0,>=0.15.0 in ./.local/lib/python3.9/site-packages (from -r ./config/requirements.txt (line 3)) (0.15.0)
+Requirement already satisfied: starlette==0.14.2 in ./.local/lib/python3.9/site-packages (from fastapi<0.69.0,>=0.68.0->-r ./config/requirements.txt (line 1)) (0.14.2)
+Requirement already satisfied: typing-extensions>=4.1.0 in ./.local/lib/python3.9/site-packages (from pydantic<2.0.0,>=1.8.0->-r ./config/requirements.txt (line 2)) (4.3.0)
+Requirement already satisfied: asgiref>=3.4.0 in ./.local/lib/python3.9/site-packages (from uvicorn<0.16.0,>=0.15.0->-r ./config/requirements.txt (line 3)) (3.5.2)
+Requirement already satisfied: click>=7.0 in ./.local/lib/python3.9/site-packages (from uvicorn<0.16.0,>=0.15.0->-r ./config/requirements.txt (line 3)) (8.1.3)
+Requirement already satisfied: h11>=0.8 in ./.local/lib/python3.9/site-packages (from uvicorn<0.16.0,>=0.15.0->-r ./config/requirements.txt (line 3)) (0.13.0)
+WARNING: You are using pip version 22.0.4; however, version 22.2.2 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
++ set +x
+Running REST
++ sleep 1
++ python3 -m uvicorn sources.main:app --port 3000
+INFO:     Started server process [24]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:3000 (Press CTRL+C to quit)
++ echo 24
++ set +x
+Now...
+Visit http://localhost:3000/docs to see your RestAPI application in action.
+Waiting 60 seconds for test the app before deploying
+Sleeping for 10 sec
+Waiting Complete
