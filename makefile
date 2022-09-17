@@ -18,7 +18,7 @@ push:
 	git push --tags
 
 run:
-	python3 -m uvicorn sources.main:app --reload --port 8000
+	python3 -m uvicorn main:app --reload --port 8000
 
 calc:
 	python3 ./sources/add2vals.py ${num1} ${num2}
