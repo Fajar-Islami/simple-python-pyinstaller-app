@@ -36,15 +36,14 @@ pipeline {
                     sh "./jenkins/scripts/dockerize.sh"
                    
                     echo "Waiting 60 seconds for test the app before deploying"
-                    sleep 10 // seconds
+                    sleep 1 // seconds
                     echo "Waiting Complete"
 
                     input message: 'Proceed to the Deploy stage?'
                     echo "App Deployed"
                     sh "./jenkins/scripts/cleaningbuild.sh"
 
-                    sh 'git branch'
-                    sh 'git push heroku master'
+                    sh "./jenkins/scripts/push.sh"
             }
         }
     }
