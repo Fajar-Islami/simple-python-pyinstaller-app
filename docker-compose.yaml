@@ -41,6 +41,8 @@ services:
     # command: sed -i 's/<disableSignup>true<\/disableSignup>/<disableSignup>false<\/disableSignup>/g' /var/jenkins_home/config.xml
     depends_on:
       - jenskins-docker_proyek_pertama
+      - prometheus_proyek_pertama
+      - grafana_proyek_pertama
 
   nginx:
     container_name: my-nginx

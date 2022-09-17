@@ -17,9 +17,44 @@ and execute at the command line on Linux machines without Python.
 The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial.
 
-# Documentaion
+# How to Run
 
-URL
+1. Build Environment
+
+```bash
+docker compose up -d
+```
+
+2. Run Application
+
+```
+make run
+
+# or
+
+make app && make container
+```
+
+## API Documentation Swagger
 
 - http://localhost:8000/docs
-- http://localhost:8000/redoc
+- http://localhost:8000/redoc  
+  or
+- https://simple-pyhton.herokuapp.com/docs
+- https://simple-pyhton.herokuapp.com/redoc
+
+## Grafana
+
+- http://localhost:3031/?orgId=1
+  > user : admin
+  > password : admin
+
+## Prometheus
+
+- http://localhost:9091
+
+## Jenkins
+
+- http://localhost:49000  
+  or
+- http://localhost:9000
