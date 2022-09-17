@@ -33,6 +33,7 @@ pipeline {
             agent any
             
             steps {
+                    sh "cd jenkins"
                     // sh "./jenkins/scripts/dockerize.sh"
                    
                     // echo "Waiting 60 seconds for test the app before deploying"
