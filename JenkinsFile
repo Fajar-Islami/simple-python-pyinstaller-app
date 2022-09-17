@@ -44,7 +44,7 @@ pipeline {
                     // echo "App Deployed"
                     // sh "./jenkins/scripts/cleaningbuild.sh"
 
-                    sh "./jenkins/scripts/gitpush.sh"
+                    sh "chmod +x  ./jenkins/scripts/gitpush.sh"
             }
         }
     }
