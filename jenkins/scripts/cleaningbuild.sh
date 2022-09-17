@@ -28,3 +28,4 @@ git push -u heroku HEAD:master
 set +x
 
 
+echo 'DONE........'
