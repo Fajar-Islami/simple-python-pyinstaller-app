@@ -13,7 +13,7 @@ services:
     networks:
       jenkins:
         aliases:
-          - 'docker'
+          - docker
     volumes:
       - jenkins-docker-certs_proyek_pertama:/certs/client
       - jenkins-data_proyek_pertama:/var/jenkins_home
