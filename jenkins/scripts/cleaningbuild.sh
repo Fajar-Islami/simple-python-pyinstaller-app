@@ -2,7 +2,9 @@
 
 echo 'Cleaning depedencies'
 set -x
-make rm
+docker stop simple-pyhton &
+	docker rm simple-pyhton &
+	docker rmi simple-pyhton:1.0.0
 set +x
 
 echo 'DONE........'
