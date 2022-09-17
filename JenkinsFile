@@ -43,9 +43,14 @@ pipeline {
                     // input message: 'Proceed to the Deploy stage?'
                     echo "App Deployed"
                     sh "./jenkins/scripts/cleaningbuild.sh"
+            }
 
-                    sh "./jenkins/scripts/gitpush.sh"
+            post{
+                success {
+                    
                     // sh "chmod +x  ./jenkins/scripts/gitpush.sh"
+                    sh "./jenkins/scripts/gitpush.sh"
+                }
             }
         }
     }
