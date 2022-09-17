@@ -41,8 +41,8 @@ pipeline {
                     sleep 10 // seconds
                     echo "Waiting Complete"
 
-                    // input message: 'Proceed to the Deploy stage?'
-                    // echo "App Deployed"
+                    input message: 'Proceed to the Deploy stage?'
+                    echo "App Deployed"
                  }
             }
             // post {
