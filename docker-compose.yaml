@@ -85,7 +85,6 @@ networks:
 volumes:
   jenkins-docker-certs_proyek_pertama: {}
   jenkins-data_proyek_pertama: {}
-  prometheus_data:
-    driver: local
+  prometheus_data: {}
   grafana_data:
     driver: local
