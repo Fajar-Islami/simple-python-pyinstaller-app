@@ -22,7 +22,7 @@ set +x
 
 echo 'Push to Heroku'
 set -x
-git remove -v
+git remote -v
 git push -u heroku master
 set +x
 
