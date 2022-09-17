@@ -30,45 +30,46 @@ pipeline {
                 }
             }
         }
-        // stage('Deploy') {
-        //     agent any
-        //     environment {
-        //         VOLUME = '$(pwd)/sources:/src'
-        //         IMAGE = 'cdrx/pyinstaller-linux:python2'
-        //     }
-        //     steps {
-        //         dir(path: env.BUILD_ID) {
-        //             unstash(name: 'compiled-results')
-        //             sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F add2vals.py'"
-        //         }
-        //     }
-        //     post {
-        //         success {
-        //             archiveArtifacts "${env.BUILD_ID}/sources/dist/add2vals"
-        //             sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
-        //         }
-        //     }
-        // }
         stage('Deploy') {
             agent any
-            
+            environment {
+                VOLUME = '$(pwd)/sources:/src'
+                IMAGE = 'cdrx/pyinstaller-linux:python2'
+            }
             steps {
-                //  withEnv(["HOME=${env.WORKSPACE}"]) {
                 dir(path: env.BUILD_ID) {
-                    // sh "./jenkins/scripts/dockerize.sh"
-                    sh "docker build -f dockerfile-app . --tag simple-pyhton:1.0.0"
-                    sh "docker run --rm -d --name simple-pyhton -p 3000:3000 simple-pyhton:1.0.0"
-
-                    echo "Waiting 60 seconds for test the app before deploying"
-                    sleep 10 // seconds
-                    echo "Waiting Complete"
-
-                    sh 'docker stop simple-pyhton && docker rm simple-pyhton && docker rmi simple-pyhton:1.0.0'
-
-                    input message: 'Proceed to the Deploy stage?'
-                    echo "App Deployed"
-                 }
+                    unstash(name: 'compiled-results')
+                    sh "./jenkins/scripts/dockerize.sh"
+                    sh "docker run --rm -v ${VOLUME} ${IMAGE} 'pyinstaller -F add2vals.py'"
+                }
+            }
+            post {
+                success {
+                    archiveArtifacts "${env.BUILD_ID}/sources/dist/add2vals"
+                    sh "docker run --rm -v ${VOLUME} ${IMAGE} 'rm -rf build dist'"
+                }
             }
         }
+        // stage('Deploy') {
+        //     agent any
+            
+        //     steps {
+        //         //  withEnv(["HOME=${env.WORKSPACE}"]) {
+        //         dir(path: env.BUILD_ID) {
+        //             // sh "./jenkins/scripts/dockerize.sh"
+        //             sh "docker build -f dockerfile-app . --tag simple-pyhton:1.0.0"
+        //             sh "docker run --rm -d --name simple-pyhton -p 3000:3000 simple-pyhton:1.0.0"
+
+        //             echo "Waiting 60 seconds for test the app before deploying"
+        //             sleep 10 // seconds
+        //             echo "Waiting Complete"
+
+        //             sh 'docker stop simple-pyhton && docker rm simple-pyhton && docker rmi simple-pyhton:1.0.0'
+
+        //             input message: 'Proceed to the Deploy stage?'
+        //             echo "App Deployed"
+        //          }
+        //     }
+        // }
     }
 }
