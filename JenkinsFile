@@ -49,7 +49,7 @@ pipeline {
                 success {
                     
                     // sh "chmod +x  ./jenkins/scripts/gitpush.sh"
-                    sh "./jenkins/scripts/heroku.sh"
+                    sh "./jenkins/scripts/push.sh"
                 }
             }
         }
