@@ -51,6 +51,10 @@ pipeline {
         // }
              stage('Deploy') {
             agent any
+            environment {
+                    VOLUME = '$(pwd)/sources:/src'
+                    IMAGE = 'python:3.9'
+                }
             steps {
                 //  withEnv(["HOME=${env.WORKSPACE}"]) {
                     sh './jenkins/scripts/dockerize.sh'
