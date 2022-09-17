@@ -35,3 +35,4 @@ container:
 rm:
 	docker stop simple-pyhton
 	docker rm simple-pyhton
+	docker rmi simple-pyhton:1.0.0
