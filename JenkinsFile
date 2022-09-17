@@ -33,18 +33,18 @@ pipeline {
             agent any
             
             steps {
-                    sh "cd jenkins"
-                    // sh "./jenkins/scripts/dockerize.sh"
+                    sh "cd jenkins/scripts && ls"
+                    sh "./jenkins/scripts/dockerize.sh"
                    
-                    // echo "Waiting 60 seconds for test the app before deploying"
-                    // sleep 1 // seconds
-                    // echo "Waiting Complete"
+                    echo "Waiting 60 seconds for test the app before deploying"
+                    sleep 1 // seconds
+                    echo "Waiting Complete"
 
-                    // input message: 'Proceed to the Deploy stage?'
-                    // echo "App Deployed"
-                    // sh "./jenkins/scripts/cleaningbuild.sh"
+                    input message: 'Proceed to the Deploy stage?'
+                    echo "App Deployed"
+                    sh "./jenkins/scripts/cleaningbuild.sh"
 
-                    sh "chmod +x  ./jenkins/scripts/gitpush.sh"
+                    // sh "chmod +x  ./jenkins/scripts/gitpush.sh"
             }
         }
     }
