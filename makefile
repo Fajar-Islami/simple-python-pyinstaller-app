@@ -24,7 +24,7 @@ calc:
 	python3 ./sources/add2vals.py ${num1} ${num2}
 
 install:
-	python3 -m pip install -r ./config/requirements.txt
+	python3 -m pip install -r requirements.txt
 
 app:
 	docker build -f dockerfile-app . --tag simple-pyhton:1.0.0
