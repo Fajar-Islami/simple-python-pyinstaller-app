@@ -42,6 +42,8 @@ pipeline {
                     input message: 'Proceed to the Deploy stage?'
                     echo "App Deployed"
                     sh "./jenkins/scripts/cleaningbuild.sh"
+
+                    sh 'git push heroku master'
             }
         }
     }
