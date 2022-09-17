@@ -37,9 +37,6 @@ pipeline {
                 IMAGE = 'cdrx/pyinstaller-linux:python2'
             }
             steps {
-                dir('/') {
-                    sh('ls')
-                }
                 dir(path: env.BUILD_ID) {
                     unstash(name: 'compiled-results')
                     // sh "./jenkins/scripts/dockerize.sh"
