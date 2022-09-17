@@ -48,8 +48,8 @@ pipeline {
                 success {
                     
                     sh "./jenkins/scripts/cleaningbuild.sh"
+                    sh "./jenkins/scripts/push.sh"
                     // sh "chmod +x  ./jenkins/scripts/gitpush.sh"
-                    // sh "./jenkins/scripts/push.sh"
                 }
             }
         }
