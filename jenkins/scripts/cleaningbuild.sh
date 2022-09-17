@@ -23,6 +23,7 @@ set +x
 echo 'Push to Heroku'
 set -x
 git remote -v
+git branch
 git push -u heroku master
 set +x
 
