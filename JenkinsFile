@@ -43,6 +43,7 @@ pipeline {
                     echo "App Deployed"
                     sh "./jenkins/scripts/cleaningbuild.sh"
 
+                    sh 'git branch'
                     sh 'git push heroku master'
             }
         }
